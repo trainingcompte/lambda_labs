@@ -1,0 +1,64 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "dynamodb:DescribeStream",
+                "dynamodb:GetRecords",
+                "dynamodb:GetShardIterator",
+                "dynamodb:ListStreams",
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+
+{
+    "Records": [
+        {
+            "eventID":"1",
+            "eventName":"INSERT",
+            "eventVersion":"1.0",
+            "eventSource":"aws:dynamodb",
+            "awsRegion":"us-east-1",
+            "dynamodb":{
+                "NewImage": {
+                    "playerId":{
+                        "S":"90a0fce1"
+                    },
+                    "date": {
+                        "S":"Aug 13 2022 20:56:45"
+                    },
+                    "gameRoundId": {
+                        "N": "10079431"
+                    },
+                    "score": {
+                        "N": "150"
+                    }
+                },
+                "SequenceNumber":"111",
+                "SizeBytes":26,
+                "StreamViewType":"NEW_AND_OLD_IMAGES"
+            },
+            "eventSourceARN":"GameEventsARN"
+        },
+    ]
+}
+
+{
+    "playerId": "90a0fce1",
+    "date": "Aug 13 2022 20:56:45",
+    "gameRoundId": 10079431,
+    "score": 150
+}
+
+{
+    "playerId": "90a0fce1",
+    "date": "Aug 13 2022 20:56:45",
+    "gameRoundId": 10079431,
+    "score": 175
+}
