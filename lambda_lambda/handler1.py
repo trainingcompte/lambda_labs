@@ -4,7 +4,7 @@ import uuid
 
 def lambda_handler(event, context):
     #1 - Read off the input arguments
-    CustomerId = event['CustmoerId']
+    CustomerId = event['CustomerId']
 
     #2 - Generate a random id
     transactionId = str(uuid.uuid1())
