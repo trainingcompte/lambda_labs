@@ -13,4 +13,4 @@ def lambda_handler(event, context):
 
     #4 - Format and return response
 
-    return {'CustomerId': custmoerId, 'Success': 'true', 'TransactionId': transactionId}
+    return {'CustomerId': CustomerId, 'Success': 'true', 'TransactionId': transactionId}
