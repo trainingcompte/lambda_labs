@@ -15,7 +15,7 @@ def lambda_handler(event, context):
     print(key)
 
     #Get our object
-    response = s3Client.get_object(Bucket = bucker, Key = key)
+    response = s3Client.get_object(Bucket = bucket, Key = key)
 
     #Process it
     data = response['Body'].read().decode('utf-8')
